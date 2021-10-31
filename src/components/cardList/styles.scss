@@ -10,13 +10,12 @@
   .card {
     display: flex;
     flex-direction: column;
+    width: 84%;
+    height: 200px;
 
     align-items: left;
     justify-content: center;
-
-    width: 250px;
     padding: 0px 15px;
-    height: 200px;
     
     margin: 0 3px;
     border-radius: 5px;
