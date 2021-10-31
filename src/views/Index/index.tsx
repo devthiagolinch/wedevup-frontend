@@ -20,7 +20,6 @@ type Cars = {
 export function  Index() {
   const [distanceSearch, setDistanceSearch] = useState('');
   const [durationSearch, setDurationSearch] = useState('');
-  // const [search, setSearch] = useState<Cars[]>([]);
   const [cars, setCars] = useState<Cars[]>([])
 
   useEffect(() => {
@@ -29,8 +28,8 @@ export function  Index() {
   },[])
 
   const resultFiltered = cars.filter(c => 
-    c.availability.maxDistance.toString().startsWith(distanceSearch) &&
-    c.availability.maxDuration.toString().startsWith(durationSearch)
+    c.availability.maxDistance <= (distanceSearch || c.availability.maxDistance) &&
+    c.availability.maxDuration <= (durationSearch || c.availability.maxDuration)
   );
 
   return (
@@ -41,14 +40,14 @@ export function  Index() {
             <input 
               type="text" 
               className="distanceInput" 
-              placeholder="Enter the distance:"
+              placeholder="Quanto quer percorrer?"
               value={distanceSearch}
               onChange={(event) => setDistanceSearch(event.target.value)}
             />
             <input 
               type="text" 
               className="durationInput" 
-              placeholder="Enter the duration:"
+              placeholder="Por quantos dias?"
               value={durationSearch}
               onChange={(event) => setDurationSearch(event.target.value)}
             />

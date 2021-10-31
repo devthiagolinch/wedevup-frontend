@@ -18,7 +18,7 @@ export function CardsList(props: CarsProp ) {
       <div id="container" >
        <div className="card" key={props.id}>
               <div className="cardImg">
-                `pictures/${props.id}.jpg`
+                <img src="#" alt="" />
               </div>
               <div className="cardTitle">
                 <p>Model: <span>{props.model}</span></p>
@@ -38,9 +38,8 @@ export function CardsList(props: CarsProp ) {
 
               <div className="cardAvailability">
                 <div className="cardAvailabilityInfos">
-                  <strong>Max Duration:  <span>{props.availability.maxDuration}</span></strong>
-            
                   <strong>Max Distance: <span>{props.availability.maxDistance}</span></strong>
+                  <strong>Max Duration:  <span>{props.availability.maxDuration}</span></strong>
                 </div>
               </div>
             </div>

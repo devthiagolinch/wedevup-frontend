@@ -23,29 +23,20 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      
       input {
         width: 100%;
-        padding: 5px 5px;
+        padding: 8px 7px;
         margin-bottom: 16px;
 
         font-size: 15px;
 
-        &::placeholder {
-        color: #383838;
-        }
-      }
-
-      .searchButton {
-        width: 150px;
-        height: 30px;
-
-        color: #FFFFFF;
-        font-size: 15px;
-        font-weight: 700;
-
-        background: #FFC107;
         border: 0 solid transparent;
         border-radius: 3px;
+
+        &::placeholder {
+        color: #2b2b2b;
+        }
       }
     }
   
