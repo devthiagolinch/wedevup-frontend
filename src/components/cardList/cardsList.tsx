@@ -40,7 +40,7 @@ export function CardsList(props: CarsProp ) {
 
         <div className="cardPrices">
           <div className="totalPrice">
-            <strong>Total price:  <span>{totalRentPrice}</span></strong>
+            <strong>Total price:  <span>R$ {totalRentPrice.toFixed(2).replace(".", ",")}</span></strong>
           </div>
         </div>
         
