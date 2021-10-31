@@ -1,0 +1,109 @@
+#container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: left;
+    justify-content: center;
+
+    width: 250px;
+    padding: 0px 15px;
+    height: 200px;
+    
+    margin: 0 3px;
+    border-radius: 8px;
+
+    background: #FEFEFE;
+
+    transition: .2s;
+
+    &:hover{
+      filter: brightness(0.9);
+    }
+
+    .cardTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 16;
+        font-weight: 500;
+
+
+        span {
+          font-size: 16;
+          font-weight: 400;
+          margin-bottom: 36px;
+        }
+      }
+
+    }
+
+    .cardPrices {
+      margin-bottom: 10px;
+
+      .pricePerDay {
+        display: flex;
+        align-items: left;
+        margin-bottom: 5px;
+
+        strong {
+          font-weight: 500;
+          font-size: 16;
+          margin-right: 15px;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      .pricePerKm {
+        display: flex;
+        align-items: left;
+
+        strong {
+          font-weight: 500;
+          font-size: 16px;
+          margin-right: 16px;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .cardAvailability{
+
+      .cardAvailabilityInfos {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          font-weight: 500;
+          font-size: 16px;
+          margin-right: 7px;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 15px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
