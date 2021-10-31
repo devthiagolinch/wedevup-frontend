@@ -12,9 +12,9 @@ type Cars = {
   pricePerDay: number,
   pricePerKm: number,
   availability: { 
-    maxDuration: string,
-    maxDistance: string 
-  }
+    maxDuration: number,
+    maxDistance: number 
+  },
 }
 
 export function  Index() {
@@ -38,14 +38,14 @@ export function  Index() {
         <div className="search">
           <form>
             <input 
-              type="text" 
+              type="number" 
               className="distanceInput" 
               placeholder="Quanto quer percorrer?"
               value={distanceSearch}
               onChange={(event) => setDistanceSearch(event.target.value)}
             />
             <input 
-              type="text" 
+              type="number" 
               className="durationInput" 
               placeholder="Por quantos dias?"
               value={durationSearch}
@@ -62,16 +62,16 @@ export function  Index() {
             return (
               <CardsList 
                 key={car.id}
-                id={car.id} 
-                picturePath={car.picturePath} 
-                brand={car.brand} 
-                model={car.model} 
-                pricePerDay={car.pricePerDay} 
-                pricePerKm={car.pricePerKm} 
+                id={car.id}
+                picturePath={car.picturePath}
+                brand={car.brand}
+                model={car.model}
+                pricePerDay={car.pricePerDay}
+                pricePerKm={car.pricePerKm}
                 availability={{
                   maxDuration: car.availability.maxDuration,
                   maxDistance: car.availability.maxDistance
-                }}          
+                }}
               />
             )
           })
